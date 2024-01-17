@@ -31,7 +31,7 @@ async function main() {
               createTransferInstruction(ata, toATA.address, account.publicKey, accountData.amount, []),
             )
           }
-          if ((i > 0 && i % 9 === 0) || i === atas.length - 1) {
+          if ((i > 0 && i % 15 === 0) || i === atas.length - 1) {
             const recentBlockhash = await connection.getLatestBlockhash()
             tx.feePayer = keypair.publicKey
             tx.recentBlockhash = recentBlockhash.blockhash
